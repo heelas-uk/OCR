@@ -2,9 +2,7 @@ print("Welcome to the number game")
 import random as r
 total = r.randint(10, 30)
 print(f"Starting with {total} tokens.")
-
 while total > 0:
-    # AI move: misère rule (last token loses). Try to leave 1 mod 4.
     p2 = (total - 1) % 4
     if p2 == 0:
         p2 = 12
@@ -14,7 +12,6 @@ while total > 0:
     if total == 0:
         print("AI took the last token. Player wins.")
         break
-
     # Player move: keep asking until a valid move
     while True:
         try:
